@@ -1,3 +1,4 @@
+import { FaUtensils, FaTshirt, FaBook, FaLaptop, FaMoneyBill, FaBox } from 'react-icons/fa';
 import React, { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import MessageList from './MessageList';
@@ -128,17 +129,17 @@ const ChatWindow = ({ donationId, onClose }) => {
   const getCategoryIcon = (category) => {
     switch (category) {
       case 'food':
-        return '🍽️';
+        return <FaUtensils className="inline-block text-lg mr-1" />;
       case 'clothing':
-        return '👕';
+        return <FaTshirt className="inline-block text-lg mr-1" />;
       case 'books':
-        return '📚';
+        return <FaBook className="inline-block text-lg mr-1" />;
       case 'electronics':
-        return '💻';
+        return <FaLaptop className="inline-block text-lg mr-1" />;
       case 'financial':
-        return '💰';
+        return <FaMoneyBill className="inline-block text-lg mr-1" />;
       default:
-        return '📦';
+        return <FaBox className="inline-block text-lg mr-1" />;
     }
   };
 

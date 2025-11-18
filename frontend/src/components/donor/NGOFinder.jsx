@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaUtensils, FaTshirt, FaBook, FaLaptop, FaMoneyBill, FaBox } from 'react-icons/fa';
 import LoadingSpinner from '../common/LoadingSpinner';
 
 const NGOFinder = ({ onSelectNGO, selectedCategory = null }) => {
