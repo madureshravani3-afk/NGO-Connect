@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
-    message: 'Donor-NGO Platform API is running',
+    message: 'NGOConnect API is running',
     timestamp: new Date().toISOString()
   });
 });

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Donor-NGO Platform</h3>
+            <h3 className="text-lg font-semibold mb-4">NGOConnect</h3>
             <p className="text-gray-300">
               Connecting donors with verified NGOs to make a positive impact in communities.
             </p>
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-300">
-          <p>&copy; 2024 Donor-NGO Platform. All rights reserved.</p>
+          <p>&copy; 2024 NGOConnect. All rights reserved.</p>
         </div>
       </div>
     </footer>

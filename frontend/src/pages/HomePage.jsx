@@ -19,7 +19,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Welcome to Donor-NGO Platform
+              Welcome to NGOConnect
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Connecting generous donors with verified NGOs to create meaningful impact in communities across India.

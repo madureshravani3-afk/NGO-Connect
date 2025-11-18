@@ -76,7 +76,7 @@ const RoleBasedNavigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <h1 className="text-xl font-bold">Donor-NGO Platform</h1>
+            <h1 className="text-xl font-bold">NGOConnect</h1>
           </Link>
 
           {/* Desktop Navigation */}

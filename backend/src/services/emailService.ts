@@ -16,12 +16,12 @@ const createTransporter = () => {
 // Email templates
 const emailTemplates = {
   passwordReset: (resetLink: string, firstName: string) => ({
-    subject: 'Password Reset Request - Donor-NGO Platform',
+    subject: 'Password Reset Request - NGOConnect',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333;">Password Reset Request</h2>
         <p>Hello ${firstName},</p>
-        <p>We received a request to reset your password for your Donor-NGO Platform account.</p>
+        <p>We received a request to reset your password for your NGOConnect account.</p>
         <p>Click the button below to reset your password:</p>
         <div style="text-align: center; margin: 30px 0;">
           <a href="${resetLink}" 
@@ -36,17 +36,17 @@ const emailTemplates = {
         <p>If you didn't request this password reset, please ignore this email.</p>
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
         <p style="color: #666; font-size: 12px;">
-          This is an automated email from the Donor-NGO Platform. Please do not reply to this email.
+          This is an automated email from the NGOConnect. Please do not reply to this email.
         </p>
       </div>
     `
   }),
 
   welcomeEmail: (firstName: string, role: string) => ({
-    subject: 'Welcome to Donor-NGO Platform!',
+    subject: 'Welcome to NGOConnect!',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #333;">Welcome to Donor-NGO Platform!</h2>
+        <h2 style="color: #333;">Welcome to NGOConnect!</h2>
         <p>Hello ${firstName},</p>
         <p>Thank you for joining our platform as a ${role}. We're excited to have you on board!</p>
         ${role === 'donor' ? `
@@ -77,19 +77,19 @@ const emailTemplates = {
         <p>If you have any questions, feel free to contact our support team.</p>
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
         <p style="color: #666; font-size: 12px;">
-          This is an automated email from the Donor-NGO Platform. Please do not reply to this email.
+          This is an automated email from the NGOConnect. Please do not reply to this email.
         </p>
       </div>
     `
   }),
 
   emailVerification: (verificationLink: string, firstName: string) => ({
-    subject: 'Verify Your Email - Donor-NGO Platform',
+    subject: 'Verify Your Email - NGOConnect',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333;">Verify Your Email Address</h2>
         <p>Hello ${firstName},</p>
-        <p>Thank you for registering with the Donor-NGO Platform. Please verify your email address to complete your registration.</p>
+        <p>Thank you for registering with the NGOConnect. Please verify your email address to complete your registration.</p>
         <div style="text-align: center; margin: 30px 0;">
           <a href="${verificationLink}" 
              style="background-color: #007bff; color: white; padding: 12px 24px; 
@@ -102,19 +102,19 @@ const emailTemplates = {
         <p><strong>This link will expire in 24 hours.</strong></p>
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
         <p style="color: #666; font-size: 12px;">
-          This is an automated email from the Donor-NGO Platform. Please do not reply to this email.
+          This is an automated email from the NGOConnect. Please do not reply to this email.
         </p>
       </div>
     `
   }),
 
   ngoRegistration: (firstName: string, organizationName: string) => ({
-    subject: 'NGO Registration Received - Donor-NGO Platform',
+    subject: 'NGO Registration Received - NGOConnect',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333;">NGO Registration Received</h2>
         <p>Hello ${firstName},</p>
-        <p>Thank you for registering <strong>${organizationName}</strong> on the Donor-NGO Platform.</p>
+        <p>Thank you for registering <strong>${organizationName}</strong> on the NGOConnect.</p>
         <p>Your NGO registration has been successfully submitted and is now under review by our verification team.</p>
         <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
           <h3 style="color: #333; margin-top: 0;">What happens next?</h3>
@@ -142,14 +142,14 @@ const emailTemplates = {
         <p>If you have any questions about the verification process, please contact our support team.</p>
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
         <p style="color: #666; font-size: 12px;">
-          This is an automated email from the Donor-NGO Platform. Please do not reply to this email.
+          This is an automated email from the NGOConnect. Please do not reply to this email.
         </p>
       </div>
     `
   }),
 
   ngoStatusUpdate: (firstName: string, organizationName: string, status: string, reason?: string) => ({
-    subject: `NGO Verification ${status === 'verified' ? 'Approved' : 'Update'} - Donor-NGO Platform`,
+    subject: `NGO Verification ${status === 'verified' ? 'Approved' : 'Update'} - NGOConnect`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333;">NGO Verification ${status === 'verified' ? 'Approved' : 'Update'}</h2>
@@ -194,7 +194,7 @@ const emailTemplates = {
         <p>If you have any questions about this decision, please contact our support team.</p>
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
         <p style="color: #666; font-size: 12px;">
-          This is an automated email from the Donor-NGO Platform. Please do not reply to this email.
+          This is an automated email from the NGOConnect. Please do not reply to this email.
         </p>
       </div>
     `
@@ -213,7 +213,7 @@ export const sendEmail = async (to: string, template: { subject: string; html: s
     const transporter = createTransporter();
     
     const mailOptions = {
-      from: `"Donor-NGO Platform" <${process.env.EMAIL_USER}>`,
+      from: `"NGOConnect" <${process.env.EMAIL_USER}>`,
       to,
       subject: template.subject,
       html: template.html

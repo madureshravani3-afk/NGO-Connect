@@ -98,7 +98,7 @@ const generateAcceptedEmailHTML = (donation: IDonation, acceptingNGO: IUser): st
 
       <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
         Thank you for making a difference in your community!<br>
-        - The Donor-NGO Platform Team
+        - The NGOConnect Team
       </p>
     </div>
   `;
@@ -122,7 +122,7 @@ ${acceptingNGO.profile?.phone ? `- Phone: ${acceptingNGO.profile.phone}` : ''}
 Next Steps: The NGO will coordinate with you for pickup or collection. Please keep your donation ready and available.
 
 Thank you for making a difference in your community!
-- The Donor-NGO Platform Team
+- The NGOConnect Team
   `;
 };
 
@@ -145,7 +145,7 @@ const generateCancelledEmailHTML = (donation: IDonation, reason?: string): strin
       </p>
 
       <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
-        - The Donor-NGO Platform Team
+        - The NGOConnect Team
       </p>
     </div>
   `;
@@ -163,7 +163,7 @@ ${reason ? `- Reason: ${reason}` : ''}
 
 This donation has been cancelled. If you have any questions, please contact our support team.
 
-- The Donor-NGO Platform Team
+- The NGOConnect Team
   `;
 };
 
@@ -188,7 +188,7 @@ const generateCompletedEmailHTML = (donation: IDonation): string => {
 
       <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
         Thank you for being part of our mission to connect donors with those in need!<br>
-        - The Donor-NGO Platform Team
+        - The NGOConnect Team
       </p>
     </div>
   `;
@@ -207,7 +207,7 @@ Thank You for Your Generosity!
 Your donation has been successfully completed and is now helping those in need. Your contribution makes a real difference in the community.
 
 Thank you for being part of our mission to connect donors with those in need!
-- The Donor-NGO Platform Team
+- The NGOConnect Team
   `;
 };
 
@@ -226,7 +226,7 @@ const generateStatusChangeEmailHTML = (donation: IDonation, statusChange: { from
       </div>
 
       <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
-        - The Donor-NGO Platform Team
+        - The NGOConnect Team
       </p>
     </div>
   `;
@@ -242,6 +242,6 @@ Donation Details:
 - Status Changed: ${statusChange.from} → ${statusChange.to}
 ${statusChange.reason ? `- Reason: ${statusChange.reason}` : ''}
 
-- The Donor-NGO Platform Team
+- The NGOConnect Team
   `;
 };
