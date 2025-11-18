@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaBolt, FaHandshake, FaClipboardList } from 'react-icons/fa';
 import DonationRequests from '../../components/ngo/DonationRequests';
 
 const DonationRequestsPage = () => {
@@ -71,7 +72,7 @@ const DonationRequestsPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">⚡</span>
+              <FaBolt className="text-blue-500 text-2xl" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Quick Response</h3>
             <p className="text-sm text-gray-600">
@@ -81,7 +82,7 @@ const DonationRequestsPage = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🤝</span>
+              <FaHandshake className="text-green-500 text-2xl" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Clear Communication</h3>
             <p className="text-sm text-gray-600">
@@ -91,7 +92,7 @@ const DonationRequestsPage = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">📋</span>
+              <FaClipboardList className="text-purple-500 text-2xl" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Proper Documentation</h3>
             <p className="text-sm text-gray-600">
